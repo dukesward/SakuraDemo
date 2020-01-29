@@ -1,0 +1,12 @@
+<div class="stage">
+  <div>
+    <api-proxy></api-proxy>
+    <div *ngIf="!apiProxy.hasError()">
+      <ul class="list">
+        <li class="list-item" *ngFor="let actor of actors; let i = index">
+          <bohemia [componentId]="actor.moduleId" [entity]="actor"></bohemia>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

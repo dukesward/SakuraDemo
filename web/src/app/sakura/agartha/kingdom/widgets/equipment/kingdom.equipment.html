@@ -1,0 +1,27 @@
+<div class="item-wrapper">
+    <img-loader imgSrc='{{ item.icon }}' imgType='png' imgHeight='84'></img-loader>
+    <div class="inline-block v-top item-info-board">
+        <div class="pt-1">
+            <div [ngClass]="['item-name','item-' + item.quality, 'pt-2-t']">
+                <span>{{ item.name }}</span>
+                <span *ngFor="let tag of getTags()">
+                    <span [ngClass]="['mini-tag', tag.type]">{{ tag.name }}</span>
+                </span>
+            </div>
+            <div class="message-gray item-attrs pt-2-y">
+                <div *ngFor="let attr of getAttributes()">
+                    <div>
+                        <span>{{ attr.attrName }}</span>
+                        <span class="pt-2-l">{{ attr.attrValue }}</span>
+                    </div>
+                </div>
+                <div class="item-price">
+                    <span *ngIf="getPrices().copper">
+                        <img-loader class="top-0-r" imgSrc='price/copper' imgType='gif' imgHeight='16'></img-loader>
+                        <span class="pt-1-l">{{ getPrices().copper }}</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

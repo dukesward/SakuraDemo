@@ -1,0 +1,41 @@
+quality
+N - normal +0 p+0%
+U - uncommon +4 p+10%
+R - rare +8 p+20%
+E - epic +16 p+40%
+L - legendary +24 p+70%
+
+q -> 
+1a = 0.6q
+
+armors
+1. cloth p+0%
+2. leather p+40% a+15%
+3. chain p+95% a+30%
+4. plate p+160% a+40%
+
+position [base=4]
+1. head [1-3] c/l/p p1
+2. chest [4-7] c/l/h/p p2.2
+3. feet [8-10] c/l/p p1.3
+4 - 6. body or accessory (leg/hand/waist/back) or jewery (ear/neck/wrest)
+leg [11-13] c/l/p p1.6
+hand [14-16] c/l/p p0.8
+waist [17-18] l/p p0.7
+back [19] p0.4
+ear [20] p1.6
+neck [21] p1.7
+wrest [22] p1.2
+trinket [37] p2.1
+
+weapon
+1. sword -> greatsword [23-24] p1.4 - p1.9
+2. axe -> greataxe [25-26] p1.5 - p2.1
+3. mace -> hammer [27-28] p1.3 - p2
+4. wand -> staff [29-30] p1.6 - p2.4
+5. crossbow -> bow [31-32] p1.7 - p1.3
+6. dagger -> heavyknife [33-34] p1.2 - p1.8
+7. fist [35] p1.2
+8. polearm [36] p2.2
+
+example: waist: l,q2,N = 0.7*1.4*2*[base=4] = 8coins [8copper]

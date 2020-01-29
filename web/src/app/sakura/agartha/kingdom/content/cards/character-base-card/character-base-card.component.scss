@@ -1,0 +1,76 @@
+.level-wrapper {
+    position: absolute;
+    top: 12px;
+    left: 5px;
+    .level-label {
+        position: absolute;
+        top: 2px;
+        color: #fff;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #424242;
+        font-size: 20px;
+        text-shadow: 1px 1px #60707b;
+        width: 30px;
+        text-align: center;
+    }
+}
+.char-name-wrapper {
+    margin-bottom: 5px;
+}
+.class-label {
+    top: -2px !important;
+}
+.status-wrapper {
+    width: 60%;
+    margin-top: 8px;
+    margin-left: -8px;
+}
+.outer-wrapper {
+    border: 1px solid #22292d;
+    width: 100%;
+    border-radius: 10px;
+}
+.status-bar-wrapper {
+    padding: 2px;
+    box-shadow: 3px 3px 12px 1px #394034;
+    background-color: #7e7b6e;
+    border-radius: 8px;
+    font-size: 14px;
+    border: 1px solid #b0a165;
+    position: relative;
+}
+.status-bar-wrapper .inner-wrapper {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+.status-bar-inner-filling {
+    padding: 1px 0px;
+    width: 100%;
+    position: relative;
+}
+.status-hp-wrapper {
+    .status-bar-inner-filling {
+        min-height: 10px;
+        background: linear-gradient(to bottom, #c3d38f 0%,#b2ce5c 23%,#a1c417 43%,#8fa35d 66%,#8baa3d 100%);
+        border-top: 1px solid #cde398;
+    }
+}
+.status-energy-wrapper {
+    .status-bar-inner-filling {
+        min-height: 7px;
+        background: linear-gradient(to bottom, #d1c87d 0%,#c6bb59 28%,#ad9c5f 66%,#aa983f 100%);
+        border-top: 1px solid #ebdc87;
+    }
+}
+.status-bar-content {
+    position: absolute;
+    color: #fff;
+    top: -7px;
+    right: 10px;
+    z-index: 99;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #424242;
+    font-size: 20px;
+    text-shadow: 1px 1px #60707b;
+}

@@ -1,0 +1,26 @@
+<div>
+  <div class='header-wrapper'>
+    <div class='header-portal pt-4-b pt-5-t'>
+      <div class='container text-center'>
+        <a class='header-logo'>
+          <img-loader imgSrc='kingdom' imgType='svg' imgHeight='48'></img-loader>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class='portal-main'>
+    <div class='auth-form'>
+      <sakura-auth-box *ngIf="routePath == 'portal'"
+        [submitButtonText]='portalStaticConfig.authBoxSignIn.submitButtonText' 
+        [formHeaderText]='portalStaticConfig.authBoxSignIn.formHeaderText'
+        [createAccountPrompt]='portalStaticConfig.authBoxSignIn.createAccountPrompt'
+        [createAccountHyperLinkText]='portalStaticConfig.authBoxSignIn.createAccountHyperLinkText'
+        [createAccountHyperLinkLink]='portalStaticConfig.authBoxSignIn.createAccountHyperLinkLink'>
+      </sakura-auth-box>
+      <sakura-auth-box *ngIf="routePath == 'signup'"
+        [submitButtonText]='portalStaticConfig.authBoxSignUp.submitButtonText' 
+        [formHeaderText]='portalStaticConfig.authBoxSignUp.formHeaderText'>
+      </sakura-auth-box>
+    </div>
+  </div>
+</div>

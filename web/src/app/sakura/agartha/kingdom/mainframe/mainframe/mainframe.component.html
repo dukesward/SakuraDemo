@@ -1,0 +1,17 @@
+<div [id]="getTheme()" class="mt-5-y pt-3 br-10 font-acme">
+  <div class="kingdom-header text-right mt-2-x">
+    <div class="circle-label">{{ characterService.getNumberOfCharacters() }}</div>
+    <div class="fl-l mini-label" *ngIf="userService">
+      <span>
+          {{ userService.getUserName() }}
+      </span>
+    </div>
+    <img-loader imgSrc='settings' imgType='png' imgHeight='48'></img-loader>
+  </div>
+  <div>
+    <api-proxy></api-proxy>
+  </div>
+  <div id="kingdom-content" class="mt-6-t">
+    <bohemians></bohemians>
+  </div>
+</div>

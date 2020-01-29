@@ -1,0 +1,8 @@
+<div class='api-err-wrapper' [style.display]="(apiError&&apiError.message)?'block':'none'">
+  {{ apiError | json }}
+  <div class='err-loader circle mt-a' [style.display]="loading?'block':'none'"></div>
+  <div *ngIf="apiError && apiError.message" class='text-center'>
+    <img-loader class='err-icon' imgSrc='error' imgType='svg' imgHeight='16'></img-loader>
+    <span>{{ apiError.message }}</span>
+  </div>
+</div>

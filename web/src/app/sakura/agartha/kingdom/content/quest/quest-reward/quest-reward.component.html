@@ -1,0 +1,42 @@
+<div class="w-80 inline-block v-top">
+    <div class="evt-headers pt-1-y f-18">
+        <div class="float-30">
+            <span>{{ getContentSchema('title') }}</span>
+        </div>
+        <div class="float-30"><span>{{ getEventSchema('quest-wrapper:quest-objective-text') }}</span></div>
+        <div class="inline-block v-top pt-3-l"><span>{{ getEventSchema('quest-wrapper:quest-reward-text') }}</span></div>
+    </div>
+    <div class="frame-outer">
+        <div class="frame-inner">
+            <div *ngFor="let questItem of getQuests()" class="pt-2-y">
+                <div class="float-30">
+                    <div class="quest-message">
+                        <div class="message-gray pt-2-y">
+                            <span>{{ getObjectiveMessage(questItem) }}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="float-30">
+                    <div class="quest-objective">
+                        <div class="message-gray pt-2-y">
+                            <span>{{ getObjectiveContent(questItem) }}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline-block v-top pt-3-l">
+                    <div class="quest-reward">
+                        <div *ngFor="let reward of questItem.rewards">
+                            <div class="quest-reward-wrapper pt-2-y">
+                                <span>
+                                    <img-loader imgSrc='{{ reward.iconSrc }}' imgType='png' imgHeight='72'></img-loader>
+                                </span>
+                                <span class="item-info-label">{{ reward.itemInfo }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

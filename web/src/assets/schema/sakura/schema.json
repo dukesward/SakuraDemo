@@ -1,0 +1,108 @@
+{
+    "kingdom-root": {
+        "exception": {
+            "schema-undefined": {
+                "text": "undefined",
+                "format": "capitalize"
+            }
+        }
+    },
+    "kingdom-event": {
+        "bohemian-menu": {
+            "displayText": {
+                "text": "events",
+                "format": "capitalize"
+            },
+            "style": {
+                "imgSrc": {
+                    "default": "kingdom-event",
+                    "gold": "kingdom-event-gold"
+                }
+            }
+        },
+        "quest-wrapper": {
+            "quest-objective-text": {
+                "text": "目标"
+            },
+            "quest-reward-text": {
+                "text": "奖励"
+            },
+            "quest-reward-experience": {
+                "text": "+ {amount}EXP"
+            }
+        }
+    },
+    "kingdom-character": {
+        "bohemian-menu": {
+            "displayText": {
+                "text": "characters",
+                "format": "capitalize"
+            }
+        }
+    },
+    "kingdom-quest": {
+        "bohemian-menu": {
+            "displayText": {
+                "text": "quests",
+                "format": "capitalize"
+            }
+        }
+    },
+    "kingdom-inventory": {
+        "bohemian-menu": {
+            "displayText": {
+                "text": "inventory",
+                "format": "capitalize"
+            }
+        }
+    },
+    "kingdom-pub-ann": {
+        "event_board": {
+            "class-kingdom-gold": {
+                "text": "event-board-gold"
+            }
+        }
+    },
+    "kingdom-pub-offer": {
+        "event_board": {
+            "class-kingdom-gold": {
+                "text": "event-board-gold"
+            }
+        }
+    },
+    "kingdom-content-event": {
+        "event_pub_ann_1": {
+            "title": {
+                "text": "{title}"
+            },
+            "message_sv1": {
+                "text": "你从阴暗潮湿的地牢中醒来。周围嘈杂的声音令你逐渐意识到，这是一场暴动。这样的机会不容错过，你必须尽可能让自己能活着逃出这个鬼地方。"
+            },
+            "objective_sv1": {
+                "text": "弄清楚暴动的具体原因，找到逃离地牢的方法。"
+            }
+        },
+        "event_pub_offer_1": {
+            "title": {
+                "text": "{title}"
+            },
+            "message": {
+                "text": "欢迎来到 Kingdom! 你获得了随机赠送的装备一件。"
+            }
+        }
+    },
+    "kingdom-equipment": {
+        "attributes": {
+            "armor": {
+                "text": "+ {value}"
+            }
+        }
+    },
+    "kingdom-character-card": {
+        "event_board": {
+            "class-kingdom-gold": {
+                "text": "event-board-gold"
+            }
+        }
+    }
+}

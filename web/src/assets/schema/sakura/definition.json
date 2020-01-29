@@ -1,0 +1,89 @@
+{
+    "kingdom-event": {
+        "schema": {
+            "parent": "kingdom-root"
+        },
+        "image-source": {
+            "event_gift": "events/event-gift"
+        },
+        "event_pub_ann_1": {
+            "characters": "all"
+        }
+    },
+    "kingdom-equipment": {
+        "list": [
+            {
+                "type": "weapon"
+            },
+            {
+                "type": "shield"
+            },
+            {
+                "type": "head"
+            },
+            {
+                "type": "chest"
+            },
+            {
+                "type": "foot"
+            },
+            {
+                "type": "accessory"
+            },
+            {
+                "type": "accessory"
+            },
+            {
+                "type": "accessory"
+            }
+        ],
+        "type": {
+            "accessory": "饰品"
+        },
+        "subtype": {
+            "belt": "腰带"
+        },
+        "attributes": [
+            {
+                "synom": "A",
+                "attribute": "armor",
+                "attributeName": "护甲",
+                "type": "basic"
+            }
+        ]
+    },
+    "kingdom-character": {
+        "attributes": [
+            {
+                "synom": "STR",
+                "attribute": "strength",
+                "type": "hexa"
+            },
+            {
+                "synom": "DEX",
+                "attribute": "dexterity",
+                "type": "hexa"
+            },
+            {
+                "synom": "CON",
+                "attribute": "constitution",
+                "type": "hexa"
+            },
+            {
+                "synom": "INT",
+                "attribute": "intelligence",
+                "type": "hexa"
+            },
+            {
+                "synom": "FAI",
+                "attribute": "faith",
+                "type": "hexa"
+            },
+            {
+                "synom": "LUC",
+                "attribute": "luck",
+                "type": "hexa"
+            }
+        ]
+    }
+}

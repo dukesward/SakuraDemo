@@ -1,0 +1,16 @@
+<div *ngIf="showEvent()" class="event-wrapper">
+    <div [class]="getElementClass('event_board')">
+        <ng-content></ng-content>
+        <ng-container [ngSwitch]="entity.type">
+            <ng-container *ngSwitchCase="'pub-ann'">
+                <ng-container *ngTemplateOutlet="publicAnnounceTemplate"></ng-container>
+            </ng-container>
+            <ng-container *ngSwitchCase="'pub-offer'">
+                <ng-container *ngTemplateOutlet="publicOfferTemplate"></ng-container>
+            </ng-container>
+            <ng-container *ngSwitchCase="'character-card'">
+                <ng-container *ngTemplateOutlet="characterCardTemplate"></ng-container>
+            </ng-container>
+        </ng-container>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+::ng-deep .event-board-gold {
+    padding: 10px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #3f5b6f 0%, #7d713c 90%);
+    border: 1.5px solid #d4c07c;
+    min-height: 50px;
+    box-shadow: 6px 6px 12px 1px #312d0e;
+}
+::ng-deep .location-profile {
+    position: relative;
+    img {
+        position: absolute;
+        top: -66px;
+        right: 0;
+    }
+}
+::ng-deep .stick-right-corner {
+    position: absolute;
+    right: 0px;
+    bottom: -30px;
+    vertical-align: bottom;
+    display: inline-block;
+}

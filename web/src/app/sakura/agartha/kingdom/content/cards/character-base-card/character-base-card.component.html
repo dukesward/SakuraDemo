@@ -1,0 +1,43 @@
+<div class="relative">
+    <div class="square-wrapper level-wrapper inline-block v-top">
+        <div>
+            <span class="level-label v-top">1</span>
+            <img-loader imgSrc='misc/square-copper' imgType='png' imgHeight='32'></img-loader>
+        </div>
+    </div>
+    <div class="hexa-wrapper inline-block">
+        <img-loader imgSrc='{{ getCharacterAvartar() }}' imgType='png' imgHeight='96'></img-loader>
+    </div>
+    <div class="status-wrapper inline-block v-top">
+        <div class="char-name-wrapper">
+            <span>{{ characterEntity?.nameEn }}</span>
+            <span class="mini-tag class-label class-label-{{characterEntity?.classProfile.classLevel}}">
+                {{ characterEntity?.classProfile.className }}
+            </span>
+        </div>
+        <div class="outer-wrapper mt-1-t">
+            <div class="status-bar-wrapper status-hp-wrapper">
+                <div class="status-bar-content">
+                    <span>{{ hpContainer?.currentVal }}</span>
+                        /
+                    <span>{{ hpContainer?.maxVal }}</span>
+                </div>
+                <div class="inner-wrapper">
+                    <div class="status-bar-inner-filling"></div>
+                </div>
+            </div>
+        </div>
+        <div class="outer-wrapper mt-1-t">
+            <div class="status-bar-wrapper status-{{spContainer?.type}}-wrapper">
+                <div class="status-bar-content">
+                    <span>{{ this.spContainer?.currentVal }}</span>
+                        /
+                    <span>{{ this.spContainer?.maxVal }}</span>
+                </div>
+                <div class="inner-wrapper">
+                    <div class="status-bar-inner-filling"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

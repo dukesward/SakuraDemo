@@ -1,0 +1,57 @@
+<kingdom-event-wrapper [entity]="entity" [events]="serviceEvent()">
+    <api-proxy></api-proxy>
+    <div *kingdomCharacterCard>
+        <div *ngIf="entity.dataReady">
+            <kingdom-character-base-card class="inline-block w-25"
+                [avatarIcon]="entity.eventId"
+                [characterEntity]="character"
+                [hpContainer]="buildHpContainer()"
+                [spContainer]="buildSpContainer()"
+            ></kingdom-character-base-card>
+            <div class="mt-1-l inline-block v-top">
+                <div class="basic-status-wrapper mt-2-t">
+                    <div>
+                        <span>
+                            <img-loader imgSrc='misc/p-damage' imgType='png' imgHeight='24'>
+                            </img-loader>
+                        </span>
+                        <span class="basic-status v-top message-gray">1-3</span>
+                    </div>
+                    <div>
+                        <span>
+                            <img-loader imgSrc='misc/defense' imgType='png' imgHeight='24'>
+                            </img-loader>
+                        </span>
+                        <span class="basic-status v-top message-gray">5</span>
+                    </div>
+                    <div>
+                        <span>
+                            <img-loader imgSrc='misc/magic' imgType='png' imgHeight='24'>
+                            </img-loader>
+                        </span>
+                        <span class="basic-status v-top message-gray">0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="status-out-wrapper" class="mt-3-l inline-block v-top">
+                <div class="status-wrapper mt-2-y">
+                    <div *ngFor="let attr of buildCharacterHexaStatus()" class="inline-block pt-2-x">
+                        <div>
+                            <span>{{ attr.synom }}</span>
+                            <span class="pt-2-l message-gray">
+                                {{ characterAttributes[attr.attribute] }}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="equipment-wrapper">
+                    <div *ngFor="let equip of this.characterEquipments" class="pt-1-t">
+                        <div class="pt-2-x">
+                            <img-loader imgSrc='items/{{ equip.itemId }}' imgType='png' imgHeight='48'></img-loader>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</kingdom-event-wrapper>

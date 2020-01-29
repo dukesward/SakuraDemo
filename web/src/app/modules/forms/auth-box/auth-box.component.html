@@ -1,0 +1,25 @@
+<div class='auth-form'>
+  <form [formGroup]='formGroup' (ngSubmit)='onSubmit(formGroup.value)'>
+    <div class='auth-form-header'>
+      <h1>{{ formHeaderText }}</h1>
+    </div>
+    <div class='auth-form-body auth-form-wrapper mt-3-t'>
+      <div>
+        <label for='username'>Username</label>
+        <input id='username' class='input-block form-control' type='text' formControlName='username'>
+      </div>
+      <div>
+        <label for='password'>Password</label>
+        <input id='password' class='input-block form-control' type='password' formControlName='password'>
+      </div>
+      <input type='submit' [value]='submitButtonText'>
+    </div>
+  </form>
+  <p class='create-account-callout auth-form-wrapper'>
+    <span>{{ createAccountPrompt }}</span>
+    <a [href]='createAccountHyperLinkLink'>{{ createAccountHyperLinkText }}</a>
+  </p>
+  <p class='auth-error-callout auth-form-wrapper'>
+    <api-proxy></api-proxy>
+  </p>
+</div>

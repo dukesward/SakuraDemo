@@ -1,0 +1,35 @@
+<kingdom-event-wrapper [entity]="entity" [event]="serviceEvent()">
+    <api-proxy></api-proxy>
+    <div *kingdomPubOffer>
+        <div class="relative">
+            <div class="hexa-wrapper location-profile">
+                <img-loader *ngIf="entity.dataReady" imgSrc='{{ getOfferType() }}' imgType='png' imgHeight='128'></img-loader>
+            </div>
+            <div class="char-wrapper inline-block">
+                <img-loader imgSrc='{{ getMainCharacter() }}' imgType='png' imgHeight='128'></img-loader>
+            </div>
+            <div class="w-75 inline-block v-top pt-2-l">
+                <div class="evt-headers pt-1-y f-18">
+                    <div class="float-30">
+                        <span><span class="pt-1-r">!</span> {{ getContentSchema('title') }}</span>
+                    </div>
+                    <div class="frame-outer mt-2-t">
+                        <div class="frame-inner">
+                            <div *ngIf="entity.dataReady" class="pt-2">
+                                <div class="quest-message pt-2">
+                                    <div class="message-gray">
+                                        <span>{{ getEventMessage() }}</span>
+                                    </div>
+                                </div>
+                                <kingdom-equip [item]="getItemInfo()"></kingdom-equip>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="confirm-handler stick-right-corner clickable" (click)="confirm()">
+                <img-loader imgSrc='misc/button-check' imgSrcOnHover="misc/button-check-a" imgType='png' imgHeight='72'></img-loader>
+            </div>
+        </div>
+    </div>
+</kingdom-event-wrapper>

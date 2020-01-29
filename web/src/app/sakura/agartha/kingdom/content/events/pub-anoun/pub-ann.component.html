@@ -1,0 +1,23 @@
+<kingdom-event-wrapper [entity]="entity">
+    <api-proxy></api-proxy>
+    <div *kingdomPubAnn>
+        <div class="relative">
+            <div class="hexa-wrapper location-profile">
+                <img-loader imgSrc='{{ getLocationName() }}' imgType='png' imgHeight='128'></img-loader>
+            </div>
+            <div class="char-targets inline-block" *ngIf="hasCharTarget()">
+                <div *ngFor="let char of getCharTargets().toArray()">
+                    <img-loader imgSrc='{{ getCharacterAvatar(char.uuid) }}' imgType='png' imgHeight='128'></img-loader>
+                </div>
+            </div>
+            <div *ngIf="questView(); then questWrapper else eventWrapper"></div>
+            <ng-template #questWrapper>
+                <kingdom-quest-reward [entity]="entity"></kingdom-quest-reward>
+            </ng-template>
+            <ng-template #eventWrapper></ng-template>
+            <div class="confirm-handler stick-right-corner clickable" (click)="confirm()">
+                <img-loader imgSrc='misc/button-check' imgSrcOnHover="misc/button-check-a" imgType='png' imgHeight='72'></img-loader>
+            </div>
+        </div>
+    </div>
+</kingdom-event-wrapper>
