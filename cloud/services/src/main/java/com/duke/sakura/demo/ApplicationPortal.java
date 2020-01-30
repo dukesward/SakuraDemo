@@ -8,16 +8,11 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @EnableEurekaServer
 @SpringBootApplication
-public class ApplicationPortal implements WebServerFactoryCustomizer<ConfigurableServletWebServerFactory> {
+public class ApplicationPortal {
 
 	public static void main(String[] args) {
 		// spring application bootstrap
 		SpringApplication.run(ApplicationPortal.class, args);
-	}
-	
-	public void customize(ConfigurableServletWebServerFactory factory) {
-		factory.setPort(8090);
-		factory.setContextPath("");
 	}
 
 }

@@ -1,7 +1,0 @@
-[
-	{	
-		"id": "event",
-		"dataSources": ["event_global_once"],
-		"dependencies": ["user_profile"]
-	}
-]
