@@ -1,0 +1,31 @@
+server:
+  port: 8090
+  
+spring:
+  application:
+    name: sakura-kingdom
+  cloud:
+    config:
+      uri: http://localhost:8086
+
+eureka:
+  environment: dev
+  server:
+      # 关闭自我保护
+      enable-self-preservation: false
+      # 清理服务器
+      eviction-interval-timer-in-ms: 5000
+  client:
+    healthcheck:
+      enabled: true
+    service-url:
+      defaultZone: http://localhost:8091/eureka/
+    register-with-eureka: true
+    fetch-registry: false
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: env
