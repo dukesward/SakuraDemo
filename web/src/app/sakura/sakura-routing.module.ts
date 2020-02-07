@@ -4,6 +4,7 @@ import { PortalComponent } from './portal/portal.component';
 import { AgarthaComponent } from './agartha/agartha.component';
 import { KingdomComponent } from './agartha/kingdom/kingdom.component';
 import { MainframeComponent } from './agartha/kingdom/mainframe/mainframe/mainframe.component';
+import { ForgeComponent } from './agartha/kingdom/mainframe/forge/forge.component';
 
 const routes: Routes = [
     { 
@@ -41,6 +42,10 @@ const routes: Routes = [
                     {
                         path: 'home',
                         component: MainframeComponent
+                    },
+                    {
+                        path: 'forge',
+                        component: ForgeComponent
                     }
                 ]
             }

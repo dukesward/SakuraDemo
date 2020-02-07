@@ -1,0 +1,17 @@
+
+spring:
+  application:
+    name: sakura-kingdom
+  cloud:
+    config:
+      enabled: false
+      profile: dev
+      uri: http://localhost:8086
+      discovery:
+        enabled: false
+  datasource:
+    sakura:
+      username: duke
+      password: shimon
+      jdbc-url: jdbc:mysql://localhost:3306/kingdom?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&allowMultiQueries=true
+      driver-class-name: com.mysql.cj.jdbc.Drive

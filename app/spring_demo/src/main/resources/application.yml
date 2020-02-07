@@ -6,7 +6,7 @@ spring:
     name: sakura-kingdom
   cloud:
     config:
-      uri: http://localhost:8086
+      uri: http://localhost:808r
 
 eureka:
   environment: dev
@@ -17,10 +17,11 @@ eureka:
       eviction-interval-timer-in-ms: 5000
   client:
     healthcheck:
-      enabled: true
+      # enable heartbeat check with eureka server
+      enabled: false
     service-url:
       defaultZone: http://localhost:8091/eureka/
-    register-with-eureka: true
+    register-with-eureka: false
     fetch-registry: false
     
 management:

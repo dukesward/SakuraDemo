@@ -17,7 +17,7 @@ import { Hashmap } from 'src/app/models/data-structure/hashmap.model';
 export class BohemianComponent implements OnInit {
 
   private services: { [serviceId: string]: SakuraService };
-  private events: Hashmap<SakuraEventBasic>;
+  private events: any;
   private apiManager: SakuraApiManager;
   private schemaManager: SakuraSchemaManager;
 
@@ -30,7 +30,7 @@ export class BohemianComponent implements OnInit {
   constructor() {
     this.menus = [];
     this.services = {};
-    this.events = new Hashmap<SakuraEventBasic>();
+    this.events = {};
   }
 
   ngOnInit() {
@@ -49,25 +49,35 @@ export class BohemianComponent implements OnInit {
   registerApi(apiManager: SakuraApiManager, schemaManager: SakuraSchemaManager) {
     this.apiManager = apiManager;
     this.schemaManager = schemaManager;
+    this.stage.beforeShow(this.apiManager);
   }
 
   registerService(key: string, service: SakuraService) {
     this.services[key] = service;
   }
 
-  registerEvent(event: SakuraEventBasic) {
-    this.events.put(event.eventId, event);
-    this.stage.beforeShow(this.events, this.apiManager);
+  registerEvent(moduleId: string, event: AgarthaEventBasic) {
+    if(!this.events[moduleId]) {
+      this.events[moduleId] = new Hashmap<AgarthaEventBasic>();
+    }
+    this.events[moduleId].put(event.eventId, event);
   }
 
   notify(moduleId: string) {
     console.log("module [" + moduleId + "] has been handled");
+    if(this.events[moduleId]) {
+      this.stage.prepareEvents(moduleId, this.events[moduleId]);
+    }
     if(this.apiManager) {
-      this.stage.startShow({
-        module: moduleId,
-        component: "bohemian",
-        handler: this.services[moduleId]
-      });
+      if(this.stage.started()) {
+        this.stage.refresh(moduleId);
+      }else {
+        this.stage.startShow({
+          module: moduleId,
+          component: "bohemian",
+          handler: this.services[moduleId]
+        });
+      }
     }else {
       console.error("API not registered");
     }

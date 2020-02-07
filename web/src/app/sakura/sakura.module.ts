@@ -29,6 +29,7 @@ import { MainframeComponent } from './agartha/kingdom/mainframe/mainframe/mainfr
 import { KingdomEventWrapperComponent } from './agartha/kingdom/content/event-wrapper/event-wrapper.component';
 import { KingdomPublicAnnouncement } from './agartha/kingdom/content/events/pub-anoun/pub-ann.component';
 import { KingdomPublicAnnounceDirective } from './agartha/kingdom/templates/pub-ann.directive';
+import { ForgeComponent } from './agartha/kingdom/mainframe/forge/forge.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { KingdomPublicAnnounceDirective } from './agartha/kingdom/templates/pub-
     // kingdom
     KingdomComponent,
     MainframeComponent,
+    ForgeComponent,
     KingdomEventWrapperComponent,
     KingdomPublicAnnouncement,
     KingdomPublicOffer,

@@ -48,7 +48,7 @@ export class MainframeComponent implements OnInit {
   }
 
   getTheme() {
-    return environment.profuctionContent.theme;
+    return environment.productionContent.theme;
   }
 
   initApiProxy() {
@@ -62,7 +62,8 @@ export class MainframeComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    this.elementRef.nativeElement.ownerDocument.body.style.background = "url('/assets/img/background-pattern-gold.png')";
+    this.elementRef.nativeElement.ownerDocument.body.style.background = "url('/assets/jpg/fantasy/theme-gold.jpg')";
+    this.elementRef.nativeElement.ownerDocument.body.style["background-size"] = "cover";
   }
 
   initServices() {
@@ -77,7 +78,7 @@ export class MainframeComponent implements OnInit {
   }
 
   registerEvents() {
-    this.bohemian.registerEvent(new AgarthaEventBasic("kingdom-event-global", this.eventService, "getItems"));
+    this.bohemian.registerEvent("kingdom-event", new AgarthaEventBasic("kingdom-event-global", this.eventService, "getItems", null, true));
   }
 
 }

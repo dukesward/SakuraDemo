@@ -12,7 +12,6 @@ export class KingdomContentService extends AgarthaServiceBasic {
 
   protected _hasHeader: boolean;
   protected _event: KingdomEventBasic;
-  protected _actionHandler: KingdomActionHandler;
   protected _services: Hashmap<KingdomContentService>;
 	protected _stageApiProxy: ApiProxyComponent;
 
@@ -35,7 +34,7 @@ export class KingdomContentService extends AgarthaServiceBasic {
   }
 
   action(actionId: string, event: KingdomEventBasic) {
-		this._actionHandler.build(this._actionHandler)[actionId + "Action"](event);
+		this.actionHandler.build(this.actionHandler)[actionId + "Action"](event);
 	}
 
   emptyItem(moduleDisplayName: string) {

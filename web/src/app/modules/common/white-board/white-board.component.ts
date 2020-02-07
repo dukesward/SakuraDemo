@@ -38,7 +38,7 @@ export class WhiteBoardComponent implements OnInit {
   }
 
   getElementClass(element: string) {
-    var theme: string = environment.profuctionContent.theme;
+    var theme: string = environment.productionContent.theme;
     var schema: SchemaBasic = this.schemaManager.loadSchema(this.moduleId, element).get("class-" + theme);
     return schema.getContent();
   }

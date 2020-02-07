@@ -5,6 +5,7 @@ import { Stack } from 'src/app/models/data-structure/stack';
 import { Hashmap } from 'src/app/models/data-structure/hashmap.model';
 import { SakuraEventBasic } from 'src/app/models/utility/event.basic';
 import { TypedList } from 'src/app/models/data-structure/typed-list.model';
+import { SakuraApiScout } from 'src/app/sakura.api.scout';
 
 @Component({
   selector: 'api-proxy',
@@ -23,11 +24,15 @@ export class ApiProxyComponent implements OnInit {
   private apiError: object;
   private errorHandler: CallableFunction;
   private loading: boolean;
+  private status: string;
+  private scouts: TypedList<SakuraApiScout>;
 
   constructor() {
     this.apiError = {};
     this.events = new Stack<SakuraEventBasic>();
     this.loading = false;
+    this.status = 'R';
+    this.scouts = new TypedList<SakuraApiScout>();
   }
 
   ngOnInit() {
@@ -36,6 +41,10 @@ export class ApiProxyComponent implements OnInit {
   bind(service: SakuraApiManager) {
     this.service = service;
     return this;
+  }
+
+  isInvoked(): boolean {
+    return this.status === 'I';
   }
 
   setEvents(events: Hashmap<SakuraEventBasic>) {
@@ -59,6 +68,14 @@ export class ApiProxyComponent implements OnInit {
     return this;
   }
 
+  registerScout(scout: SakuraApiScout) {
+    this.scouts.add(scout);
+  }
+
+  registerScouts(scouts: SakuraApiScout[]) {
+    this.scouts.addAll(scouts);
+  }
+
   error(handler: CallableFunction) {
     this.errorHandler = handler;
     return this;
@@ -69,11 +86,15 @@ export class ApiProxyComponent implements OnInit {
   }
 
   finish(event: SakuraEventBasic, data: any) {
-    if(!event.completed(data, event.clock)) {
-      this.apiError = this.apiError || {};
-      this.apiError['message'] = "Get data from " + event.eventId + " failed";
+    var dataBody = data.body;
+    if(dataBody) {
+      if(!event.completed(dataBody, event.clock)) {
+        this.apiError = this.apiError || {};
+        this.apiError['message'] = "Get data from " + event.eventId + " failed";
+      }
+      event.finish(dataBody);
     }
-    event.finish(data);
+    this.scouts.each(scout => scout.notify(data));
   }
 
   transaction(events: TypedList<SakuraEventBasic>) {
@@ -94,6 +115,7 @@ export class ApiProxyComponent implements OnInit {
     var srcFull = 'do' + utils.capitalize(srcId);
     // console.log('source name is ' + srcFull);
     if(this.events.hasItem()) {
+      this.status = 'I';
       var event = this.events.next();
       this.lastEvent = event;
       var s = this.service[srcFull];
@@ -109,7 +131,7 @@ export class ApiProxyComponent implements OnInit {
                 event.tick();
                 this.events.add(this.lastEvent);
               }
-              this.finish(event, data.body);
+              this.finish(event, data);
               this.invoke(srcId, callback);
             }
           },
@@ -132,6 +154,7 @@ export class ApiProxyComponent implements OnInit {
         );
       }
     }else {
+      this.status = 'R';
       if(callback) callback();
     }
   }

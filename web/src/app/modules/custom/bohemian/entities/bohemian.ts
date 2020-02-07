@@ -5,12 +5,14 @@ import { Hashmap } from 'src/app/models/data-structure/hashmap.model';
 export class Bohemian implements EntityBasic {
 
     private _menuId: string;
+    private _menuIcon: string;
     private _imgType: string;
     private _menuSchema: Hashmap<SchemaBasic>;
 
-    constructor(id: string, imgType: string) {
+    constructor(id: string, imgType: string, menuIcon: string = null) {
         this._menuId = id;
         this._imgType = imgType;
+        this._menuIcon = menuIcon ? (id + '-' + menuIcon) : null;
     }
 
     get menuId() {
@@ -23,6 +25,14 @@ export class Bohemian implements EntityBasic {
 
     set imgType(imgType: string) {
         this._imgType = imgType;
+    }
+
+    get menuIcon() {
+        return this._menuIcon;
+    }
+
+    set menuIcon(menuIcon: string) {
+        this._menuIcon = menuIcon;
     }
 
     setSchema(schema: Hashmap<SchemaBasic>) {

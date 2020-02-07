@@ -1,7 +1,20 @@
+import constants from '../assets/configs/constants';
+
 export class utils {
 
     public static capitalize(str: string): string {
         return str[0].toLocaleUpperCase() + str.substr(1);
+    }
+
+    public static getConstant(key: string): string {
+        var tokens = key.split(':');
+        var temp = constants;
+        for(var i=0; i<tokens.length; i++) {
+            if(temp[tokens[i]]) {
+                temp = temp[tokens[i]];
+            }
+        }
+        return typeof temp === 'string' ? temp : null;
     }
 
     public static inArray(arr: any[], target: any) {

@@ -7,12 +7,14 @@ export class AgarthaEventBasic extends SakuraEventBasic {
 
     protected _service: AgarthaServiceBasic;
     private _sourceId: string;
+    private _scout: boolean;
 
-    constructor(eventId: string, service: AgarthaServiceBasic, sourceId: string, entity?: EntityBasic) {
+    constructor(eventId: string, service: AgarthaServiceBasic, sourceId: string, entity?: EntityBasic, scout?: boolean) {
         super(eventId, entity);
         this._service = service;
         this._sourceId = sourceId;
         this._eventData = null;
+        this._scout = scout || false;
     }
 
     completed(target: any, timer: number = -1): boolean {
@@ -28,6 +30,10 @@ export class AgarthaEventBasic extends SakuraEventBasic {
             target = this._hooks['finish'].call(this, this._eventId, target);
         }
         this._service.store(this._eventId, target);
+    }
+
+    isScout(): boolean {
+        return this._scout || false;
     }
 
     init(): Hashmap<any> {

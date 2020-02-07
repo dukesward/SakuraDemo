@@ -70,4 +70,12 @@ export class TypedList<T> implements List {
         }
         return items;
     };
+
+    map(callback: (item: T) => any): any[] {
+        var items: any[] = [];
+        for(var i=0; i<this.list.length; i++) {
+            items.push(callback(this.list[i]));
+        }
+        return items;
+    }
 }

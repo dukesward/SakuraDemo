@@ -1,0 +1,81 @@
+2020-01-31 05:12:27.947  INFO 31288 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-01-31 05:12:28.214  INFO 31288 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$7eb9da97] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.0.RELEASE)
+
+2020-01-31 05:12:29.427  INFO 31288 --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at: http://localhost:8086
+2020-01-31 05:12:30.741  INFO 31288 --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=sakura-kingdom, profiles=[dev], label=null, version=null, state=null
+2020-01-31 05:12:30.741  INFO 31288 --- [  restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='classpath:/config/sakura-kingdom-dev.yml'}]}
+2020-01-31 05:12:30.808  INFO 31288 --- [  restartedMain] com.duke.sakura.demo.ApplicationPortal   : The following profiles are active: dev
+2020-01-31 05:12:32.234  INFO 31288 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-31 05:12:32.510  INFO 31288 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 268ms. Found 15 repository interfaces.
+2020-01-31 05:12:32.772  WARN 31288 --- [  restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-01-31 05:12:33.236  INFO 31288 --- [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7754ac3e-ed0b-3c0b-a0c4-08610a4ab7cb
+2020-01-31 05:12:33.327  INFO 31288 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$3651e91d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-31 05:12:33.433  INFO 31288 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$629fd79a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-31 05:12:33.478  INFO 31288 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$7eb9da97] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-31 05:12:34.979  INFO 31288 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-01-31 05:12:35.003  INFO 31288 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-31 05:12:35.004  INFO 31288 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
+2020-01-31 05:12:35.020  INFO 31288 --- [  restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_241\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_241/bin/server;C:/Program Files/Java/jre1.8.0_241/bin;C:/Program Files/Java/jre1.8.0_241/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Softwares\x86_64-5.1.0-posix-seh-rt_v4-rev0\mingw64\bin;C:\Softwares\TortoiseGit\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Softwares\Git\cmd;D:\Softwares\PuTTY\;D:\Infra\wamp\bin\apache\apache2.4.9\bin;;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Users\Duke\AppData\Roaming\Dashlane\3.5.2.94798\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\Users\Duke\AppData\Roaming\Dashlane\3.6.0.97092\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\Users\Duke\AppData\Local\Microsoft\WindowsApps;D:\Infra\wamp\bin\apache\apache2.4.9\bin;D:\Softwares\Microsoft VS Code\bin;C:\Users\Duke\AppData\Roaming\npm;D:\Softwares\wamp64\bin\mariadb\mariadb10.4.10\bin;D:\Softwares\maven\bin;;C:\Users\Duke\Desktop;;.]
+2020-01-31 05:12:35.288  INFO 31288 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-31 05:12:35.289  INFO 31288 --- [  restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4453 ms
+duke
+2020-01-31 05:12:38.382  INFO 31288 --- [  restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-01-31 05:12:38.384  INFO 31288 --- [  restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2020-01-31 05:12:38.384  INFO 31288 --- [  restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-01-31 05:12:38.384  INFO 31288 --- [  restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'formContentFilter' to: [/*]
+2020-01-31 05:12:38.384  INFO 31288 --- [  restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-01-31 05:12:38.385  INFO 31288 --- [  restartedMain] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2020-01-31 05:12:38.385  INFO 31288 --- [  restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpTraceFilter' to: [/*]
+2020-01-31 05:12:38.385  INFO 31288 --- [  restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'configCorsFilter' to: [/*]
+2020-01-31 05:12:38.385  INFO 31288 --- [  restartedMain] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2020-01-31 05:12:38.535  INFO 31288 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-31 05:12:38.776  INFO 31288 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-31 05:12:38.952  INFO 31288 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-01-31 05:12:39.111  INFO 31288 --- [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2020-01-31 05:12:39.115  INFO 31288 --- [  restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-01-31 05:12:39.369  INFO 31288 --- [  restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-01-31 05:12:39.735  INFO 31288 --- [  restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-01-31 05:12:40.085  WARN 31288 --- [  restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.duke.sakura.demo.kingdom.entity.UserEventRecordId
+2020-01-31 05:12:40.086  WARN 31288 --- [  restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.duke.sakura.demo.kingdom.entity.UserEventRecordId
+2020-01-31 05:12:40.086  WARN 31288 --- [  restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.duke.sakura.demo.kingdom.entity.InventoryItemId
+2020-01-31 05:12:40.087  WARN 31288 --- [  restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.duke.sakura.demo.kingdom.entity.InventoryItemId
+2020-01-31 05:12:41.064  INFO 31288 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-31 05:12:43.452  INFO 31288 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2020-01-31 05:12:43.452  INFO 31288 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/resources/**'], []
+2020-01-31 05:12:43.489  INFO 31288 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3a5a8860, org.springframework.security.web.context.SecurityContextPersistenceFilter@866cc1c, org.springframework.security.web.header.HeaderWriterFilter@6fb58eb, org.springframework.security.web.authentication.logout.LogoutFilter@4afc627a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6f6d4359, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3fc3e160, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7cf59746, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3f2863f9, org.springframework.security.web.session.SessionManagementFilter@526cd4a6, org.springframework.security.web.access.ExceptionTranslationFilter@1aba43a3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6e4a6739]
+2020-01-31 05:12:43.530  WARN 31288 --- [  restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-01-31 05:12:43.530  INFO 31288 --- [  restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-01-31 05:12:43.543  WARN 31288 --- [  restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-01-31 05:12:43.544  INFO 31288 --- [  restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-01-31 05:12:43.771  INFO 31288 --- [  restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-31 05:12:43.844  WARN 31288 --- [  restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-01-31 05:12:44.494  INFO 31288 --- [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2020-01-31 05:12:44.704  INFO 31288 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-01-31 05:12:45.009  INFO 31288 --- [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-01-31 05:12:45.124  INFO 31288 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-01-31 05:12:45.232  INFO 31288 --- [  restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-01-31 05:12:45.232  INFO 31288 --- [  restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-01-31 05:12:45.457  INFO 31288 --- [  restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-01-31 05:12:45.457  INFO 31288 --- [  restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-01-31 05:12:45.743  INFO 31288 --- [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-01-31 05:12:46.493  INFO 31288 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-01-31 05:12:46.497  INFO 31288 --- [  restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-01-31 05:12:46.502  INFO 31288 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1580461966500 with initial instances count: 0
+2020-01-31 05:12:46.506  INFO 31288 --- [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application sakura-kingdom with eureka with status UP
+2020-01-31 05:12:46.508  INFO 31288 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1580461966508, current=UP, previous=STARTING]
+2020-01-31 05:12:46.510  INFO 31288 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SAKURA-KINGDOM/Duke-Desktop:sakura-kingdom:8090: registering service...
+2020-01-31 05:12:46.595  INFO 31288 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2020-01-31 05:12:46.599  INFO 31288 --- [  restartedMain] com.duke.sakura.demo.ApplicationPortal   : Started ApplicationPortal in 20.441 seconds (JVM running for 21.501)
+2020-01-31 05:12:46.988  INFO 31288 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SAKURA-KINGDOM/Duke-Desktop:sakura-kingdom:8090 - registration status: 204
+2020-01-31 05:12:47.017  INFO 31288 --- [nfoReplicator-0] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at: http://localhost:8086
+2020-01-31 05:12:48.157  INFO 31288 --- [nfoReplicator-0] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=sakura-kingdom, profiles=[dev], label=null, version=null, state=null

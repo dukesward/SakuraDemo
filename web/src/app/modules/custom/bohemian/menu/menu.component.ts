@@ -4,7 +4,9 @@ import { Bohemian } from '../entities/bohemian';
 @Component({
   selector: 'bohemian',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss']
+  styleUrls: [
+    './menu.component.scss'
+  ]
 })
 export class BohemianMenuComponent implements OnInit {
 

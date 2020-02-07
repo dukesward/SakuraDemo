@@ -5,7 +5,7 @@
   <div class="bohemian-footer">
     <ul class="menu-list">
       <li class="inline-block" *ngFor="let menu of menus; let i = index">
-          <bohemian [menuId]="menu.menuId" [imgType]="menu.imgType" [menuDisplayText]="menu.getSchema('displayText')" (handler)="notify($event)"></bohemian>
+          <bohemian [menuId]="menu.menuIcon||menu.menuId" [imgType]="menu.imgType" [menuDisplayText]="menu.getSchema('displayText')" (handler)="notify($event)"></bohemian>
       </li>
     </ul>
   </div>

@@ -1,18 +1,22 @@
-#kingdom {
+::ng-deep #kingdom {
     width: 66%;
     background: linear-gradient(to bottom, #2c363e 0%, #495c65 55%, #5b7b84 100%);
     box-shadow: 0px 12px 24px 4px #27272b;
     border: 1.5px solid #92a1ad;
     color: #eace6a;
 }
-#kingdom-gold {
+::ng-deep #kingdom-gold {
     width: 66%;
-    background: linear-gradient(to bottom, #46370b 5%, #8e720c 55%, #9e8630 100%);
+    background: linear-gradient(to bottom, #7d4b31 5%, #c39548 55%, #e49c55 100%);
     box-shadow: 0px 12px 24px 4px #191709;
-    border: 1.5px solid #a8a976;
+    border: 1.0px solid #da9d51;
     color: #eace6a;
+    .text-inset {
+        color: #7d4528;
+        text-shadow: rgb(244, 186, 61) 1px 1px 0px, 2px 2px 2px rgba(206,72,44,0);
+    }
 }
-#kingdom-christmas {
+::ng-deep #kingdom-christmas {
     width: 512px;
     background: linear-gradient(to bottom, #2f210f 5%, #77350e 55%, #cc3319 100%);
     box-shadow: 0px 12px 24px 4px #191709;

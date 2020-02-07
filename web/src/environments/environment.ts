@@ -6,7 +6,9 @@ export const environment = {
   production: false,
   productionCode: 'Sakura',
   productionVersion: '{prod_version}',
-  profuctionContent: {
+  productionContent: {
+    "theme-forge": "kingdom-forge",
+    "theme-forge-short": "forge",
     "theme": "kingdom-gold"
   },
   productDomains: {

@@ -16,4 +16,6 @@ export interface List extends EntityBasic {
     each(callback: (item: any) => void): void;
 
     filter(callback: (item: any) => boolean): any[];
+
+    map(callback: (item: any) => any): any[];
 }

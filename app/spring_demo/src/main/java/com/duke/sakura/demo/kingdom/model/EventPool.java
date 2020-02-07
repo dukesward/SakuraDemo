@@ -1,7 +1,9 @@
 package com.duke.sakura.demo.kingdom.model;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -28,6 +30,9 @@ public class EventPool implements SakuraEntityBasic {
 	@Column(name="create_date")
 	private Date createDate;
 	
+	@Column(name="priority")
+	private int priority;
+	
 	@Column(name="repetitive")
 	private int repetitive;
 
@@ -52,6 +57,17 @@ public class EventPool implements SakuraEntityBasic {
 	
 	@Transient
 	private List<QuestObjectiveRelation> questObjectiveRelations;
+	
+	public static Map<String, Object> getSchema() {
+		Map<String, Object> schema = new HashMap<>();
+		schema.put("title", "string");
+		schema.put("type", "list");
+		schema.put("repetitive", "number");
+		schema.put("definitionId", "generated");
+		schema.put("publishCondition", "number");
+		schema.put("locationCondition", "list");
+		return schema;
+	}
 
 	public String getDefinitionId() {
 		return definitionId;
@@ -115,6 +131,14 @@ public class EventPool implements SakuraEntityBasic {
 
 	public void setCreateDate(Date createDate) {
 		this.createDate = createDate;
+	}
+
+	public int getPriority() {
+		return priority;
+	}
+
+	public void setPriority(int priority) {
+		this.priority = priority;
 	}
 
 	public EventPublishCondition getPublishCondition() {

@@ -27,6 +27,7 @@ export class SakuraKingdomApiManager extends SakuraApiManager {
             "kingdom-character-attributes": "character/attributes",
             "kingdom-event-global": "event/global",
             "kingdom-event-confirm": "event/confirm",
+            "kingdom-event-schema": "event/schema",
             "kingdom-inventory": "item/inventory/all",
             "kingdom-inventory-equipments": "item/inventory/equipments",
             "kingdom-reward": "item/reward"

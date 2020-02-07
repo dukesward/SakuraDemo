@@ -32,7 +32,8 @@ public class KingdomEventController {
 	@RequestMapping(value="/global", method=RequestMethod.GET, produces="application/json")
 	public ResponseEntity<Map<String, Object>> kingdomEventGlobal(
 		@RequestHeader String userProfileId,
-		@RequestHeader String locationId
+		@RequestHeader String locationId,
+		@RequestHeader String sessionId
 	) {
 		Map<String, Object> map = new HashMap<>();
 		try {
@@ -47,6 +48,21 @@ public class KingdomEventController {
 			});
 			map.put("message", "Test Kingdom event global");
 			map.put("body", events);
+			map.put("reqStatus", "pending");
+			ResponseEntity<Map<String, Object>> response = new ResponseEntity<>(map, HttpStatus.OK);
+			return response;
+		}catch (SakuraException se) {
+			se.printStackTrace(System.out);
+			return new ResponseEntity<Map<String, Object>>(se.buildExceptionResponse(), HttpStatus.SERVICE_UNAVAILABLE);
+		}
+	}
+	
+	@RequestMapping(value="/schema", method=RequestMethod.GET, produces="application/json")
+	public ResponseEntity<Map<String, Object>> kingdomEventSchema() {
+		Map<String, Object> map = new HashMap<>();
+		try {
+			map.put("message", "Test Kingdom event schema");
+			map.put("body", EventPool.getSchema());
 			ResponseEntity<Map<String, Object>> response = new ResponseEntity<>(map, HttpStatus.OK);
 			return response;
 		}catch (SakuraException se) {

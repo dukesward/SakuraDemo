@@ -1,16 +1,19 @@
-spring:
-  application:
-    name: sakura-service-center
-
 server:
-  port: 8091
+  port: 8086
+  
+logging:
+  level:
+    org:
+      springframework:
+        cloud: DEBUG
 
-eureka:
-  instance:
-    hostname: localhost
-    prefer-ip-address: true
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+spring:
+  profiles:
+    active: native
+  application:
+    name: sakura-config-central
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config

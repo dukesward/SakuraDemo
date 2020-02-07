@@ -12,7 +12,7 @@ public interface EventService extends SakuraDataService {
 	
 	public List<EventPool> getGlobalEvents(String userProfileId, String locationId);
 	
-	public List<EventPool> getNonRepetitiveGlobalEvent(String userProfileId, String locationId);
+	public void getNonRepetitiveGlobalEvent(String userProfileId, String locationId);
 	
 	public void confirmEvent(String userProfileId, String eventId);
 }
