@@ -6,7 +6,13 @@ spring:
     name: sakura-kingdom
   cloud:
     config:
-      uri: http://localhost:808r
+      uri: http://localhost:8086
+  datasource:
+    sakura:
+      username: duke
+      password: shimon
+      jdbc-url: jdbc:mysql://localhost:3306/kingdom?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&allowMultiQueries=true
+      driver-class-name: com.mysql.cj.jdbc.Driver
 
 eureka:
   environment: dev

@@ -10,12 +10,13 @@ import com.duke.sakura.demo.service.SakuraSessionManager;
 @Service
 public class KingdomUserSessionManager implements SakuraSessionManager {
 	
+	private String sessionId;
+	
 	@Autowired
 	UserSessionRepository userSessionRepository;
 
 	@Override
 	public SakuraUserSession getUserSession() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.userSessionRepository.findBySessionId(sessionId);
 	}
 }

@@ -8,4 +8,5 @@ import com.duke.sakura.demo.kingdom.model.UserSession;
 @Repository
 public interface UserSessionRepository extends JpaRepository<UserSession, String> {
 	
+	UserSession findBySessionId(String sessionId);
 }

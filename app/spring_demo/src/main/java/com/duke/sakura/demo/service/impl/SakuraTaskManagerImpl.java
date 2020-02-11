@@ -1,5 +1,6 @@
 package com.duke.sakura.demo.service.impl;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -19,10 +20,10 @@ public class SakuraTaskManagerImpl implements SakuraTaskManager {
 	
 	private static final Logger logger = LoggerFactory.getLogger(SakuraTaskManagerImpl.class);
 	private static Map<String, DataSourceTaskPool> taskCollection = new HashMap<>();
-	private static List<String> services;
+	private static List<String> services = new ArrayList<>();
 	
 	static {
-		new Thread(new TaskController()).run();
+		new Thread(new TaskController()).start();
 	}
 
 	private static class TaskController implements Runnable {

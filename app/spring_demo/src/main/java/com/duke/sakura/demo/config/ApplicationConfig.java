@@ -24,7 +24,6 @@ public class ApplicationConfig {
 	@Bean
 	@ConfigurationProperties(prefix="spring.datasource.sakura")
 	public DataSource getDataSource() {
-		System.out.println(this.username);
 		return DataSourceBuilder.create().build();
 	}
 }
